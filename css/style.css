@@ -1,0 +1,737 @@
+/* Основной цвет страницы #757575 */
+/* Цвет заголовков и кнопок #212121 */
+
+:root{
+    --primiry-text-color: #757575;
+    --title-text-color: #212121;
+    --main-font-family: roboto, sans-serif;;
+    }
+      /* Общие правила для стилизвции страцы */
+body{
+    color: var(--primiry-text-color);
+    font-family: var(--main-font-family);
+    letter-spacing: 0.03em;
+    }
+/* Свойства для корректного отображения картинок */
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.link{
+     text-decoration: none;
+     padding: 0px;
+     color: #AFB1B8;
+     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    
+    }
+
+.list{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    }
+    
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+        
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    }
+    /* Стилизация Хедера */
+
+.container{
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+       
+}
+
+.logo{
+    
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    padding-top: 24px;
+    padding-bottom: 24px;
+         
+     color: #2196F3;
+}
+.logo-accient{
+    color: #212121;
+    }
+
+.site-nav{
+    display: flex; 
+}
+.menu-nav{
+    margin-left: 93px;
+}
+.menu-nav .link{
+    color: #212121;
+}
+.menu-nav, .header-contact {
+     display: flex;
+     font-weight: 500;
+     font-size: 14px;
+     line-height: 1.14;
+     letter-spacing: 0.02em;
+     align-items: center; 
+    }
+/* .menu-nav .item:last-child{
+    margin-right: 0px;    
+}
+.header-contact .item:last-child{
+    margin-right: 0px; 
+}
+  .menu-nav .item:first-child{
+    margin-right: 93px;
+}
+.menu-nav > .item , .header-contact > .item{
+    margin-right: 50px;
+     
+} */
+
+.menu-nav .item +.item, .header-contact .item +.item{
+    margin-left: 50px;
+}
+
+
+.header-contact {
+    margin-left: auto;
+   
+}
+.page-header{
+    border-bottom: 1px solid #ececec;
+}
+.header{
+    display: flex;
+    align-items:center;
+   
+}  
+
+.menu-nav .current{
+    position: relative;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: #212121;
+    
+}
+
+.menu-nav .current::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    left:0;
+    display: block;
+    border-radius: 2px;
+    background-color: #188ce8;
+  
+    
+}
+
+.header-contact .link {
+    display: inline-block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: var(--primiry-text-color)
+}
+/* Добавление иконок */
+.icon-envelope{
+margin-right: 10px;
+fill: currentColor;
+}
+.icon-smartphone{
+    margin-right: 10px;
+}
+
+
+
+/* .letter-icon::before{
+    display: inline-flex;
+    content:"";
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    background-image: url("../images/svg/envelope.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.tel-icon::before{
+    display: inline-flex;
+    content: "";
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    background-image: url("../images/svg/smartphone.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+} */
+    /* Стилизация основного контента страницы */
+    /* Стилизация секции герой */
+
+.hero-section{
+    max-width: 1600px;
+    height: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+
+    background: #2F303A;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+            url("../images/bg-main.jpg");
+     
+}    
+.hero-title{
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;  
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    
+}
+
+.button{
+    padding: 6px 22px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    border-color:transparent;
+    align-items: center;
+    line-height: 1.63;
+    letter-spacing: 0.06em;
+    text-align: center;
+    cursor:  pointer;
+   
+    
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.button:hover, .button:focus{
+    color:#ffffff;
+    background-color: #2196F3;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08),
+     0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.main.button{
+    padding: 10px 32px;
+    font-weight: 700;
+    border-radius: 4px;
+    min-width: 200px;
+    background-color: #2196F3;
+    border: 0px;
+
+    color:#FFFFFF;
+
+}
+
+
+/* стилизация секции наши качества */
+.qualites-section{
+    padding-top: 94px;
+    padding-bottom: 94px;
+    
+}
+.section-title{
+    margin-top: 0px;
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    
+    color:var(--title-text-color);
+}
+.list-qualities{
+    display: flex;
+    margin-left: -30px;;
+
+}
+.qualities-description{
+    width: 270px;
+    margin-left: 30px;
+    
+}
+.icon-feature{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+
+    border-radius: 4px;
+    background-color: #f5f4fa;
+}
+
+.list-qualities-title{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    
+    color: var(--title-text-color);
+}
+.text{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+}
+/* Стилизация секции с картинками */
+.images-section{
+    padding-bottom: 94px;
+    
+}
+
+.list-images{
+    display: flex;
+    margin-left: -30px;
+    justify-content: space-between;
+    
+}
+.images{
+    margin-left: 30px;
+    width: 370px;
+    position: relative;
+}
+.text-box{
+    position: absolute;
+    bottom: 0px;
+    width: 370px;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+    
+}
+.text-images{
+    margin: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.17;
+    color: rgba(255, 255, 255, 1)
+
+  
+}
+            /* Стилизация секции наша команда */
+
+.team-section{
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background-color: #F5F4FA;
+}    
+.list-team-title{
+    margin: 0px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    
+    color:var(--title-text-color)
+}
+.list-team .text{
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+}
+.list-team{
+    display: flex;
+    margin-left: -30px;
+}
+.team-description{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.team-item{
+    
+    flex-basis: calc((100%/4)-30px);
+    margin-left: 30px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+     0px 1px 1px rgba(0, 0, 0, 0.14), 
+     0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+/* Стилизация  и добавление иконок соц. сетей */
+.socials{
+    display: flex;
+    margin-top: 16px; 
+    
+    justify-content: center; 
+}  
+.social-list{
+    margin-right: 10px;
+}
+.social-list:last-child{
+    margin-right: 0;
+}
+.icon-link{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    fill: currentColor;
+    border-radius: 50%;
+    
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+} 
+
+.icon-link:hover, .icon-link:focus{
+    fill: #fff;
+    background-color: #2196F3;
+}
+
+
+ /* Стилизация постоянные клиенты */
+ .clients{
+    padding-bottom: 94px;
+    padding-top: 94px;
+    
+ }
+ .list-company{
+    margin-right: 30px;
+    
+ }
+ .list-company:last-child{
+    margin-right: 0px;
+ }
+ .partners{
+    display: flex;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+ }
+
+ /* Стилизация секции постояные клиенты */
+ 
+ .button-icon{
+    display: flex;
+    width: 170px;
+    height: 92px;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #AFB1B869;
+    fill: #afb1b8;
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+ .button-icon:hover, .button-icon:focus{
+    fill: #2196f3;
+    border:1px solid #2196F3;
+ }
+
+
+
+              /* Стилизация футера */
+.footer{
+    
+    background: #2F303A;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    
+}
+.footer-logo{
+    
+    margin-bottom: 20px;
+    margin-left: 0px;
+}
+.footer-flex{
+    display: flex;
+}
+.footer .logo-accient{
+    color: #FFFFFF;
+}
+.adress{
+    
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    
+}
+
+.adress-item{
+    margin-bottom: 9px;
+     font-style:normal;
+     color: rgba(255, 255, 255, 0.6);
+}
+
+.adress-item:last-child{
+    margin-bottom: 0px;
+}
+
+.text-adress{
+    margin-bottom: 9px;
+    color: #FFFFFF;
+}
+/* Стилизация иконок соц. сетей футера */
+.footer-text{
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 0.03;
+    text-transform:uppercase ;
+    color: #fff;
+
+}
+.footer-socials{
+    padding-top: 15px;
+    margin-left: 70px;
+}
+.footer-socials>.socials{
+    margin-top: 20px;
+}
+.footer-icon-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    fill: #fff;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-icon-link:hover, .footer-icon-link:focus{
+    background-color: #2196F3;
+}
+
+                 /* СТИЛИЗАЦИЯ СТРАНИЦЫ ПОРТФОЛИО */
+
+.works-section{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.button-item{
+    margin-right: 8px;
+    font-family: inherit;
+    font-weight: 500;
+    font-size:16px;
+    line-height: 1.62;
+    text-align: center;
+}
+.button-item:last-child{
+    margin-right: 0px;
+}
+.list-buttons{
+   
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    
+}
+
+/* Стилизация наши работы */
+
+
+.list-example{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+}
+.list-example >.portfolio-item{
+    /* flex-basis: var((100%/3) -30px);  */
+    width: 370px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    border: 1px solid #ececec;
+}    
+
+/* Оформление оверлея */
+.portfolio-thumb{
+    position: relative;
+    overflow: hidden;
+   
+}
+.portfolio-overlay{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover .portfolio-overlay{
+    transform: translateY(0);
+}
+.thumb-text{
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.56;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    font-size: 18px;
+    
+    color: rgba(255, 255, 255, 1);
+}
+
+/* .list-example{
+    display: flex;
+    flex-wrap: wrap;
+    outline: 2px solid tomato;
+    margin: -30px;
+}
+.portfolio-item{ 
+    width: calc((100%/3)-30px);
+    margin: 30px;
+    outline: 2px solid tomato; 
+}*/
+
+
+.item-description {
+    padding: 20px 24px;
+}
+.portfolio-item{
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover{
+    cursor: pointer;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+     0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.list-example-title{
+
+    margin: 0px;
+    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    
+    color:var(--title-text-color);
+}
+.list-example-text{
+    margin: 0px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.88;
+    color: rgba(117, 117, 117, 1);
+}
+/* Такой вопрос почему когда я вверху ставлю данные стили ниже которые, они применятются не к всем ссылкам, а когда разместил в подвале то все хорошо работает? */
+.link:hover,
+.link:focus {
+    color: #2196F3;
+}
+
+/* Окно бекдропа */
+.backdrop{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:  rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+ .backdrop.is-hidden{
+    opacity: 0;
+    
+    pointer-events: none;
+ }
+
+ .backdrop.is-hidden .modal{
+    transform:  translate(-50%, -50%) scale(0.7);
+ }
+
+ .modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 528px;
+    height: 581px;
+    background-color:rgba(255, 255, 255, 1);
+    border-radius: 4px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+ .close-btn{
+    position: absolute;
+    display: flex;
+    top: 8px;
+    right: 8px;
+    transform: translate(-8%, -8%);
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    
+    border: 1px solid #0000001A
+ }
+ .close-icon{
+    display: flex;
+    width: 11px;
+    height: 11px;
+ }
